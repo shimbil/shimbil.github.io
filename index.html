@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore Shimbil's Software Projects – useful apps, tools and utilities. Download and get updates here." />
+  <meta property="og:title" content="Shimbil's Software Projects" />
+  <meta property="og:description" content="Explore Shimbil's Software Projects – useful apps, tools and utilities. Explore and download now!" />
+  <meta property="og:image" content="https://github.com/shimbil.png" />
+  <meta property="og:url" content="https://shimbil.github.io/" />
+
+  
+  <title>Shimbil's Software Projects</title>  
+  <link rel="icon" href="https://github.com/shimbil.png" />
+  <style>
+    :root {
+      --primary-color: #007acc;
+      --text-color: #222;
+      --card-bg: #ffffff;
+	  --bg-gradient: linear-gradient(-45deg, #e0f7fa, #ffffff, #d0e6ff, #fff);
+    }
+
+    [data-theme="dark"] {
+      --primary-color: #66b0ff;
+      --text-color: #ddd;
+      --card-bg: #2c2c2c;
+	  --bg-gradient: linear-gradient(-45deg, #1a1a1a, #121212, #333, #222);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      min-height: 100vh;
+      background: var(--bg-gradient);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      transition: background 0.3s ease, color 0.3s ease;
+      padding: 0 20px 60px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* Header without sticky */
+    .top-header {
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      border-bottom: 2px solid var(--primary-color);
+      transition: background-color 0.3s ease, padding 0.3s ease;
+      will-change: background-color, padding;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    [data-theme="dark"] .top-header {
+      background-color: rgba(30, 30, 30, 0.95);
+    }
+
+    .title-section {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 0;
+      transition: all 0.3s ease;
+    }
+
+    .header-buttons a,
+    .theme-toggle {
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      background: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .header-buttons a:hover,
+    .theme-toggle:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    h1 {
+      margin: 8px 0 5px;
+      font-size: 2.3em;
+      color: var(--primary-color);
+    }
+
+    .subtitle {
+      font-size: 1.05em;
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--text-color);
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 12px 16px;
+      margin: 20px 0 20px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .project {
+      background: var(--card-bg);
+      padding: 16px;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--primary-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .project.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      margin-right: 10px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      border: 1px solid var(--primary-color);
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .btn-download {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .btn-link {
+      background-color: transparent;
+      color: var(--primary-color);
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll to top button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #9b9b9b;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 110;
+      user-select: none;
+    }
+    #scrollToTopBtn.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .header-buttons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 6px;
+      }
+
+      .header-buttons a,
+      .theme-toggle {
+        padding: 6px 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <div class="container">
+    <header class="top-header" id="topHeader">
+      <div class="title-section">
+        <img src="https://github.com/shimbil.png" alt="Shimbil Logo" class="logo" />
+        <h1>Shimbil's Software Projects</h1>
+        <p class="subtitle">List of tools built by me – crafted to make your workflow smoother and smarter.</p>
+      </div>
+      <div class="header-buttons">
+        <button class="theme-toggle" onclick="toggleTheme()">🌗 Toggle Theme</button>
+        <a href="https://www.facebook.com/profile.php?id=61566548321322" target="_blank">📘 Facebook</a>
+        <a href="https://www.youtube.com/@shimbilkhan" target="_blank">▶️ YouTube</a>
+      </div>
+    </header>
+
+    <input
+      type="text"
+      id="searchBox"
+      class="search-box"
+      placeholder="🔍 Search projects..."
+      onkeyup="searchProjects()"
+    />
+
+    <div id="projectList"></div>
+
+    <footer>
+      <p>📫 Contact:</p>
+      <ul>
+		<li>Name: Al Shimbil Khan</li>
+		<li>Country: Bangladesh</li>
+        <li>Phone: +88 01516711976</li>
+        <li>Email: <a href="mailto:shimbilmax@gmail.com">shimbilmax@gmail.com</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61566548321322" target="_blank">facebook.com/shimbil</a></li>
+        <li>YouTube: <a href="https://www.youtube.com/@shimbilkhan" target="_blank">youtube.com/@shimbilkhan</a></li>
+        <li>GitHub: <a href="https://github.com/shimbil" target="_blank">@shimbil</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollToTopBtn" title="Scroll to top">⬆️</button>
+
+  <script>
+	/* -------------------------------------------------- */
+    const projects = [
+      {
+        title: "🖥️ PC Running Time (Windows)",
+        description: "A Windows application to track your PC's running time, idle time and remind you to take break.",
+        verion: "v1.0.0",
+        platform: "Windows",
+        repo: "https://github.com/shimbil/pc-running-time",
+        download: "https://github.com/shimbil/pc-running-time/releases"
+      },
+      {
+        title: "✨ Magic Clean (Windows)",
+        description: "A handy Windows cleaning tool to optimize your PC performance.",
+        platform: "Windows",
+        verion: "v1.0.0",
+        repo: "https://github.com/shimbil/magic-clean",
+        download: "https://github.com/shimbil/magic-clean/releases"
+      }
+    ];
+	/* -------------------------------------------------- */
+
+    function renderProjects() {
+      const container = document.getElementById("projectList");
+      container.innerHTML = "";
+
+      projects.forEach(p => {
+        const el = document.createElement("div");
+        el.className = "project";
+        el.innerHTML = `
+          <h2>${p.title}</h2>
+          <div><strong>Version:</strong> ${p.verion}</div>
+          <div><strong>Platform:</strong> ${p.platform}</div>
+          <div><strong>Description:</strong> ${p.description}</div>
+          <div class="buttons">
+            <a href="${p.download}" class="btn-download" target="_blank">⬇️ Download</a>
+            <a href="${p.repo}" class="btn-link" target="_blank">📂 GitHub Repo</a>
+          </div>
+        `;
+        container.appendChild(el);
+      });
+
+      showOnScroll();
+    }
+
+    function searchProjects() {
+      const input = document.getElementById("searchBox").value.toLowerCase();
+      const projects = document.querySelectorAll(".project");
+
+      projects.forEach((project) => {
+        const text = project.innerText.toLowerCase();
+        project.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+
+    function toggleTheme() {
+	  const body = document.body;
+	  const current = body.getAttribute("data-theme");
+	  const newTheme = current === "dark" ? "light" : "dark";
+	  body.setAttribute("data-theme", newTheme);
+
+	  // Save choice in localStorage
+	  localStorage.setItem("theme", newTheme);
+
+	  // Restart animation to apply background gradient properly
+	  body.style.animation = 'none';
+	  void body.offsetWidth; // force reflow
+	  body.style.animation = null;
+	}
+
+    function showOnScroll() {
+      const projects = document.querySelectorAll(".project");
+      const triggerBottom = window.innerHeight * 0.9;
+
+      projects.forEach(project => {
+        const boxTop = project.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          project.classList.add("visible");
+        }
+      });
+    }
+
+    // Scroll to top button logic
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener("load", () => {
+      const savedTheme = localStorage.getItem("theme");
+	  if (savedTheme) {
+		document.body.setAttribute("data-theme", savedTheme);
+	  }
+      renderProjects();
+      showOnScroll();
+    });
+    window.addEventListener("scroll", showOnScroll);
+  </script>
+</body>
+</html>
