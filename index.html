@@ -48,6 +48,10 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+	
+	a {
+		text-decoration: none !important;
+	}
 
     .container {
       max-width: 900px;
@@ -164,6 +168,10 @@
       margin-top: 0;
       color: var(--primary-color);
     }
+	
+	.project-description-item {
+	  padding: 4px 0;
+	}
 
     .buttons {
       margin-top: 20px;
@@ -183,9 +191,21 @@
       color: white;
     }
 
+    .btn-download:hover {
+      background-color: rgb(244 54 54);
+      color: #fff;
+	  border: 1px solid #bd1003 !important;
+    }
+
     .btn-link {
       background-color: transparent;
       color: var(--primary-color);
+    }
+
+    .btn-link:hover {
+      background-color: rgb(244 54 54);
+      color: #fff;
+	  border: 1px solid #bd1003 !important;
     }
 
     footer {
@@ -284,7 +304,7 @@
 		<li>Country: Bangladesh</li>
         <li>Phone: +88 01516711976</li>
         <li>Email: <a href="mailto:shimbilmax@gmail.com">shimbilmax@gmail.com</a></li>
-        <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61566548321322" target="_blank">facebook.com/shimbil</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61566548321322" target="_blank">facebook.com/shimbilmax</a></li>
         <li>YouTube: <a href="https://www.youtube.com/@shimbilkhan" target="_blank">youtube.com/@shimbilkhan</a></li>
         <li>GitHub: <a href="https://github.com/shimbil" target="_blank">@shimbil</a></li>
       </ul>
@@ -292,7 +312,7 @@
   </div>
 
   <!-- Scroll To Top Button -->
-  <button id="scrollToTopBtn" title="Scroll to top">⬆️</button>
+  <button id="scrollToTopBtn" title="Scroll to top">&#8673;</button>
 
   <script>
 	/* -------------------------------------------------- */
@@ -325,11 +345,17 @@
         el.className = "project";
         el.innerHTML = `
           <h2>${p.title}</h2>
-          <div><strong>Version:</strong> ${p.verion}</div>
-          <div><strong>Platform:</strong> ${p.platform}</div>
-          <div><strong>Description:</strong> ${p.description}</div>
+          <div class="project-description-item">
+			<strong>Version:</strong> ${p.verion}
+		  </div>
+          <div class="project-description-item">
+			<strong>Platform:</strong> ${p.platform}
+		  </div>
+          <div class="project-description-item">
+			<strong>Description:</strong> ${p.description}
+		  </div>
           <div class="buttons">
-            <a href="${p.download}" class="btn-download" target="_blank">⬇️ Download</a>
+            <a href="${p.download}" class="btn-download" target="_blank">&#8650; Download</a>
             <a href="${p.repo}" class="btn-link" target="_blank">📂 GitHub Repo</a>
           </div>
         `;
