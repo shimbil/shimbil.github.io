@@ -318,6 +318,25 @@
 	/* -------------------------------------------------- */
     const projects = [
       {
+		sl: 3,
+        title: "📊 SPL ERP DC (Windows)",
+        description: "SPL ERP DC is a client application of SPL ERP.",
+        platform: "Windows",
+        verion: "v1.0.0",
+        repo: "https://github.com/shimbil/spl-erp-dc",
+        download: "https://github.com/shimbil/spl-erp-dc/releases"
+      },
+      {
+		sl: 2,
+        title: "✨ Magic Clean (Windows)",
+        description: "A handy Windows cleaning tool to optimize your PC performance.",
+        platform: "Windows",
+        verion: "v1.0.0",
+        repo: "https://github.com/shimbil/magic-clean",
+        download: "https://github.com/shimbil/magic-clean/releases"
+      },
+      {
+		sl: 1,
         title: "🖥️ PC Running Time (Windows)",
         description: "A Windows application to track your PC's running time, idle time and remind you to take break.",
         verion: "v1.0.0",
@@ -325,14 +344,6 @@
         repo: "https://github.com/shimbil/pc-running-time",
         download: "https://github.com/shimbil/pc-running-time/releases"
       },
-      {
-        title: "✨ Magic Clean (Windows)",
-        description: "A handy Windows cleaning tool to optimize your PC performance.",
-        platform: "Windows",
-        verion: "v1.0.0",
-        repo: "https://github.com/shimbil/magic-clean",
-        download: "https://github.com/shimbil/magic-clean/releases"
-      }
     ];
 	/* -------------------------------------------------- */
 
@@ -345,6 +356,9 @@
         el.className = "project";
         el.innerHTML = `
           <h2>${p.title}</h2>
+          <div class="project-description-item">
+			<strong style="color:#e91e63">SL: ${p.sl}</strong>
+		  </div>
           <div class="project-description-item">
 			<strong>Version:</strong> ${p.verion}
 		  </div>
