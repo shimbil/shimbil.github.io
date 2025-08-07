@@ -252,6 +252,9 @@
       opacity: 1;
       pointer-events: auto;
     }
+	.d-none {
+	  display: none;
+	}
 
     @media (max-width: 600px) {
       h1 {
@@ -318,6 +321,16 @@
 	/* -------------------------------------------------- */
     const projects = [
       {
+		sl: 5,
+        title: "📊 SPL ERP",
+        description: "SPL ERP -web based multipurpose ERP Software (contact for demo).",
+        platform: "web",
+        verion: "v4+",
+        repo: "",
+        download: "",
+        demo: "https://erp.webspl.com",
+      },
+      {
 		sl: 4,
         title: "📊 SPL ERP MC (Android)",
         description: "SPL ERP MC is a client application (Android) of SPL ERP.",
@@ -366,7 +379,7 @@
         el.innerHTML = `
           <h2>${p.title}</h2>
           <div class="project-description-item">
-			<strong style="color:#e91e63">SL: ${p.sl}</strong>
+			<strong>SL: ${p.sl}</strong>
 		  </div>
           <div class="project-description-item">
 			<strong>Version:</strong> ${p.verion}
@@ -378,8 +391,9 @@
 			<strong>Description:</strong> ${p.description}
 		  </div>
           <div class="buttons">
-            <a href="${p.download}" class="btn-download" target="_blank">&#8650; Download</a>
-            <a href="${p.repo}" class="btn-link" target="_blank">📂 GitHub Repo</a>
+            <a href="${p.download}" class="btn-download ${p.download ? '' : 'd-none'}" target="_blank">&#8650; Download</a>
+            <a href="${p.repo}" class="btn-link ${p.repo ? '' : 'd-none'}" target="_blank">📂 GitHub Repo</a>
+            <a href="${p.demo}" class="btn-download ${p.demo ? '' : 'd-none'}" target="_blank">See Demo</a>
           </div>
         `;
         container.appendChild(el);
