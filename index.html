@@ -1,670 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="Explore Shimbil's Software Projects – useful apps, tools and utilities. Download and get updates here." />
-  <meta property="og:title" content="Shimbil's Software Projects" />
-  <meta property="og:description"
-    content="Explore Shimbil's Software Projects – useful apps, tools and utilities. Explore and download now!" />
-  <meta property="og:image" content="https://github.com/shimbil.png" />
-  <meta property="og:url" content="https://shimbil.github.io/" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"
+          content="Explore Shimbil's Software Projects – useful apps, tools and utilities. Download and get updates here."/>
+    <meta property="og:title" content="Shimbil's Software Projects"/>
+    <meta property="og:description"
+          content="Explore Shimbil's Software Projects – useful apps, tools and utilities. Explore and download now!"/>
+    <meta property="og:image" content="https://github.com/shimbil.png"/>
+    <meta property="og:url" content="https://shimbil.github.io/"/>
 
-  <title>Shimbil's Software Projects</title>
-  <link rel="icon" href="https://github.com/shimbil.png" />
+    <title>Shimbil's Software Projects</title>
+    <link rel="icon" href="https://github.com/shimbil.png"/>
 
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-  <style>
-    :root {
-      /* Colors - Light Mode */
-      --primary: #4F46E5;
-      --primary-hover: #4338CA;
-      --bg-color: #f8fafc;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --card-bg: rgba(255, 255, 255, 0.7);
-      --card-border: rgba(255, 255, 255, 0.3);
-      --glass-bg: rgba(255, 255, 255, 0.8);
-      --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-      --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7);
-      --mesh-1: #e0e7ff;
-      --mesh-2: #f0f9ff;
-      --mesh-3: #f5f3ff;
-      --mesh-4: #faf5ff;
-    }
+    <style>
+        :root {
+            /* Colors - Light Mode */
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg-color: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --card-border: rgba(255, 255, 255, 0.3);
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+            --mesh-1: #e0e7ff;
+            --mesh-2: #f0f9ff;
+            --mesh-3: #f5f3ff;
+            --mesh-4: #faf5ff;
+        }
 
-    [data-theme="dark"] {
-      /* Colors - Dark Mode */
-      --primary: #818cf8;
-      --primary-hover: #6366f1;
-      --bg-color: #0f172a;
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --card-bg: rgba(30, 41, 59, 0.6);
-      --card-border: rgba(255, 255, 255, 0.05);
-      --glass-bg: rgba(15, 23, 42, 0.8);
-      --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-      --mesh-1: #1e1b4b;
-      --mesh-2: #0f172a;
-      --mesh-3: #1e1b4b;
-      --mesh-4: #020617;
-    }
+        [data-theme="dark"] {
+            /* Colors - Dark Mode */
+            --primary: #818cf8;
+            --primary-hover: #6366f1;
+            --bg-color: #0f172a;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.6);
+            --card-border: rgba(255, 255, 255, 0.05);
+            --glass-bg: rgba(15, 23, 42, 0.8);
+            --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            --mesh-1: #1e1b4b;
+            --mesh-2: #0f172a;
+            --mesh-3: #1e1b4b;
+            --mesh-4: #020617;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Hind Siliguri', sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
 
-    body {
-      color: var(--text-main);
-      background-color: var(--bg-color);
-      min-height: 100vh;
-      overflow-x: hidden;
-      line-height: 1.6;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+        body {
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* Mesh Background */
-    .mesh-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: var(--bg-color);
-      background-image:
-        radial-gradient(at 0% 0%, var(--mesh-1) 0, transparent 50%),
-        radial-gradient(at 50% 0%, var(--mesh-2) 0, transparent 50%),
-        radial-gradient(at 100% 0%, var(--mesh-3) 0, transparent 50%),
-        radial-gradient(at 0% 100%, var(--mesh-4) 0, transparent 50%),
-        radial-gradient(at 50% 100%, var(--mesh-1) 0, transparent 50%),
-        radial-gradient(at 100% 100%, var(--mesh-2) 0, transparent 50%);
-      background-size: 200% 200%;
-      animation: meshGradient 20s infinite alternate;
-    }
+        /* Mesh Background - Optimized for Performance (GPU) */
+        .mesh-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: var(--bg-color);
+            overflow: hidden;
+            contain: paint;
+        }
 
-    @keyframes meshGradient {
-      0% {
-        background-position: 0% 0%;
-      }
+        .mesh-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(at 0% 0%, var(--mesh-1) 0, transparent 50%),
+            radial-gradient(at 50% 0%, var(--mesh-2) 0, transparent 50%),
+            radial-gradient(at 100% 0%, var(--mesh-3) 0, transparent 50%),
+            radial-gradient(at 0% 100%, var(--mesh-4) 0, transparent 50%),
+            radial-gradient(at 50% 100%, var(--mesh-1) 0, transparent 50%),
+            radial-gradient(at 100% 100%, var(--mesh-2) 0, transparent 50%);
+            background-size: 100% 100%;
+            animation: meshGradient 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+            transform: translateZ(0);
+        }
 
-      50% {
-        background-position: 100% 100%;
-      }
+        @keyframes meshGradient {
+            0% {
+                transform: translate(0, 0);
+            }
 
-      100% {
-        background-position: 0% 0%;
-      }
-    }
+            33% {
+                transform: translate(10%, 10%);
+            }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
+            66% {
+                transform: translate(-5%, 15%);
+            }
 
-    /* Navbar/Header */
-    header {
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      background: var(--glass-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 2rem;
-      margin-bottom: 3rem;
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
 
-    .logo-container {
-      margin-bottom: 1.5rem;
-    }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
 
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      padding: 3px;
-      background: var(--accent-gradient);
-      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
-    }
+        /* Navbar/Header */
+        header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: var(--glass-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
 
-    h1 {
-      font-family: inherit;
-      font-size: 2.5rem;
-      font-weight: 700;
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
-    }
+        .logo-container {
+            margin-bottom: 1.5rem;
+        }
 
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-    }
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            padding: 3px;
+            background: var(--accent-gradient);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
 
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+        h1 {
+            font-family: inherit;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      font-size: 0.95rem;
-      border: 1px solid transparent;
-    }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
 
-    .btn-secondary {
-      background: var(--card-bg);
-      color: var(--text-main);
-      border: 1px solid var(--card-border);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+        }
 
-    /* Search Section */
-    .search-wrapper {
-      position: relative;
-      margin-bottom: 2rem;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
 
-    .search-box {
-      width: 100%;
-      padding: 16px 20px 16px 52px;
-      font-size: 1rem;
-      border-radius: 16px;
-      border: 1px solid var(--card-border);
-      background: var(--glass-bg);
-      backdrop-filter: blur(8px);
-      color: var(--text-main);
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      font-family: inherit;
-    }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
 
-    .search-box:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
-    }
+        /* Search Section */
+        .search-wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .search-icon {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      font-size: 1.2rem;
-    }
+        .search-box {
+            width: 100%;
+            padding: 16px 20px 16px 52px;
+            font-size: 1rem;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            color: var(--text-main);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
 
-    /* Filter Chips */
-    .filters {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
 
-    .filter-chip {
-      padding: 8px 16px;
-      border-radius: 20px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      color: var(--text-muted);
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-      backdrop-filter: blur(8px);
-    }
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
 
-    .filter-chip:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-    }
+        /* Filter Chips */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
 
-    .filter-chip.active {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-    }
+        .filter-chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+        }
 
-    /* Project Grid */
-    #projectList {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
+        .filter-chip:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
 
-    .project-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 1.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      box-shadow: var(--shadow);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      overflow: hidden;
-      opacity: 0;
-      transform: translateY(20px);
-    }
+        .filter-chip.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
 
-    .project-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        /* Project Grid */
+        #projectList {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
 
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-      border-color: var(--primary);
-    }
+        .project-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(15px);
+            will-change: transform, opacity;
+        }
 
-    .project-card h2 {
-      font-family: inherit;
-      font-size: 1.4rem;
-      color: var(--primary);
-    }
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
 
-    .badge {
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-      background: rgba(79, 70, 229, 0.1);
-      color: var(--primary);
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
+        .project-card h2 {
+            font-family: inherit;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
 
-    .project-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      flex-grow: 1;
-    }
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
-    .project-actions {
-      display: flex;
-      gap: 10px;
-    }
+        .badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(79, 70, 229, 0.1);
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
 
-    .btn-action {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      border-radius: 10px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
 
-    .btn-primary {
-      background: var(--primary);
-      color: white;
-    }
+        .project-actions {
+            display: flex;
+            gap: 10px;
+        }
 
-    .btn-primary:hover {
-      background: var(--primary-hover);
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-    }
+        .btn-action {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
 
-    .btn-ghost {
-      border: 1px solid var(--card-border);
-      color: var(--text-main);
-    }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
 
-    .btn-ghost:hover {
-      background: var(--card-bg);
-      border-color: var(--primary);
-    }
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
 
-    /* Footer */
-    footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--card-border);
-    }
+        .btn-ghost {
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+        }
 
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
+        .btn-ghost:hover {
+            background: var(--card-bg);
+            border-color: var(--primary);
+        }
 
-    .footer-section h3 {
-      font-family: inherit;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-    }
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+        }
 
-    .contact-list {
-      list-style: none;
-    }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
 
-    .contact-list li {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-      color: var(--text-muted);
-    }
+        .footer-section h3 {
+            font-family: inherit;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
 
-    .contact-list i {
-      color: var(--primary);
-      font-size: 1.1rem;
-    }
+        .contact-list {
+            list-style: none;
+        }
 
-    .contact-list a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
 
-    .contact-list a:hover {
-      color: var(--primary);
-    }
+        .contact-list i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
 
-    .disclaimer {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: rgba(239, 68, 68, 0.05);
-      border-radius: 12px;
-      border: 1px solid rgba(239, 68, 68, 0.1);
-      color: #ef4444;
-      font-size: 0.8rem;
-      text-align: center;
-    }
+        .contact-list a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-    /* Scroll Top */
-    #scrollToTop {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 30px;
-      height: 30px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      z-index: 100;
-    }
+        .contact-list a:hover {
+            color: var(--primary);
+        }
 
-    #scrollToTop.show {
-      opacity: 1;
-      visibility: visible;
-    }
+        .disclaimer {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(239, 68, 68, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            font-size: 0.8rem;
+            text-align: center;
+        }
 
-    #scrollToTop:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
+        /* Scroll Top */
+        #scrollToTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 100;
+        }
 
-    /* Responsive */
-    @media (max-width: 640px) {
-      h1 {
-        font-size: 1.8rem;
-      }
+        #scrollToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
 
-      .container {
-        padding: 1rem;
-      }
+        #scrollToTop:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
 
-      #projectList {
-        grid-template-columns: 1fr;
-      }
+        /* Responsive */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.8rem;
+            }
 
-      .header-buttons {
-        flex-direction: column;
-      }
-    }
-  </style>
+            .container {
+                padding: 1rem;
+            }
+
+            #projectList {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body data-theme="light">
-  <div class="mesh-bg"></div>
-
-  <div class="container">
+<div class="mesh-bg"></div>
+<div class="container">
     <header>
-      <div class="logo-container">
-        <img src="https://github.com/shimbil.png" alt="Shimbil Logo" class="logo" />
-      </div>
-      <h1 data-t="title">Shimbil's Software Projects</h1>
-      <p class="subtitle" data-t="subtitle">List of tools built by me – crafted to make your workflow smoother and
-        smarter.</p>
+        <div class="logo-container">
+            <img src="https://github.com/shimbil.png" alt="Shimbil Logo" class="logo"/>
+        </div>
+        <h1 data-t="title">Shimbil's Software Projects</h1>
+        <p class="subtitle" data-t="subtitle">List of tools built by me – crafted to make your workflow smoother and
+            smarter.</p>
 
-      <div class="controls">
-        <button class="btn btn-secondary" onclick="toggleTheme()" id="themeBtn">
-          <i class="ri-moon-line"></i> <span data-t="toggleTheme">Toggle Theme</span>
-        </button>
-        <button class="btn btn-secondary" onclick="toggleLang()" id="langBtn">
-          <i class="ri-translate-2"></i> <span id="langLabel">Bangla</span>
-        </button>
-        <a href="https://www.facebook.com/profile.php?id=61566548321322" target="_blank" class="btn btn-secondary">
-          <i class="ri-facebook-box-fill"></i> Facebook
-        </a>
-      </div>
+        <div class="controls">
+            <button class="btn btn-secondary" onclick="toggleTheme()" id="themeBtn">
+                <i class="ri-moon-line"></i> <span data-t="toggleTheme">Toggle Theme</span>
+            </button>
+            <button class="btn btn-secondary" onclick="toggleLang()" id="langBtn">
+                <i class="ri-translate-2"></i> <span id="langLabel">Bangla</span>
+            </button>
+            <a href="https://www.facebook.com/profile.php?id=61566548321322" target="_blank" class="btn btn-secondary">
+                <i class="ri-facebook-box-fill"></i> Facebook
+            </a>
+        </div>
     </header>
 
     <div class="search-wrapper">
-      <i class="ri-search-line search-icon"></i>
-      <input type="text" id="searchBox" class="search-box" placeholder="Search projects..." onkeyup="filterContent()"
-        data-t-placeholder="searchPlaceholder" />
+        <i class="ri-search-line search-icon"></i>
+        <input type="text" id="searchBox" class="search-box" placeholder="Search projects..." onkeyup="filterContent()"
+               data-t-placeholder="searchPlaceholder"/>
     </div>
 
     <div class="filters" id="platformFilters">
-      <button class="filter-chip active" onclick="setFilter('All', this)" data-t="filterAll">All</button>
-      <button class="filter-chip" onclick="setFilter('Windows', this)">Windows</button>
-      <button class="filter-chip" onclick="setFilter('Android', this)">Android</button>
-      <button class="filter-chip" onclick="setFilter('Web', this)">Web</button>
-      <button class="filter-chip" onclick="setFilter('Addon', this)">Addon</button>
+        <button class="filter-chip active" onclick="setFilter('All', this)" data-t="filterAll">All</button>
+        <button class="filter-chip" onclick="setFilter('Windows', this)">Windows</button>
+        <button class="filter-chip" onclick="setFilter('Android', this)">Android</button>
+        <button class="filter-chip" onclick="setFilter('Web', this)">Web</button>
+        <button class="filter-chip" onclick="setFilter('Addon', this)">Addon</button>
     </div>
 
     <div id="projectList"></div>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3 data-t="contactInfo">Contact Info</h3>
-          <ul class="contact-list">
-            <li><i class="ri-user-line"></i> <span data-t="myName">Al Shimbil Khan</span></li>
-            <li><i class="ri-map-pin-line"></i> <span data-t="myCountry">Bangladesh</span></li>
-            <li><i class="ri-phone-line"></i> <a href="tel:+88 01516711976">+88 01516711976</a></li>
-            <li><i class="ri-mail-line"></i> <a href="mailto:shimbilmax@gmail.com">shimbilmax@gmail.com</a></li>
-          </ul>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-t="contactInfo">Contact Info</h3>
+                <ul class="contact-list">
+                    <li><i class="ri-user-line"></i> <span data-t="myName">Al Shimbil Khan</span></li>
+                    <li><i class="ri-map-pin-line"></i> <span data-t="myCountry">Bangladesh</span></li>
+                    <li><i class="ri-phone-line"></i> <a href="tel:+88 01516711976">+88 01516711976</a></li>
+                    <li><i class="ri-mail-line"></i> <a href="mailto:shimbilmax@gmail.com">shimbilmax@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-t="socialLinks">Social Media</h3>
+                <ul class="contact-list">
+                    <li><i class="ri-facebook-fill"></i> <a
+                            href="https://www.facebook.com/profile.php?id=61566548321322"
+                            target="_blank">Facebook</a></li>
+                    <li><i class="ri-youtube-fill"></i> <a href="https://www.youtube.com/@shimbilkhan"
+                                                           target="_blank">YouTube</a></li>
+                    <li><i class="ri-github-fill"></i> <a href="https://github.com/shimbil" target="_blank">@shimbil</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-section">
-          <h3 data-t="socialLinks">Social Media</h3>
-          <ul class="contact-list">
-            <li><i class="ri-facebook-fill"></i> <a href="https://www.facebook.com/profile.php?id=61566548321322"
-                target="_blank">Facebook</a></li>
-            <li><i class="ri-youtube-fill"></i> <a href="https://www.youtube.com/@shimbilkhan"
-                target="_blank">YouTube</a></li>
-            <li><i class="ri-github-fill"></i> <a href="https://github.com/shimbil" target="_blank">@shimbil</a></li>
-          </ul>
+        <div class="disclaimer">
+            <p data-t="disclaimer">Disclaimer: Use these tools at your own risk. The developer is not responsible for
+                any issues.</p>
         </div>
-      </div>
-      <div class="disclaimer">
-        <p data-t="disclaimer">Disclaimer: Use these tools at your own risk. The developer is not responsible for any issues.</p>
-      </div>
     </footer>
-  </div>
+</div>
 
-  <button id="scrollToTop"><i class="ri-arrow-up-line"></i></button>
+<button id="scrollToTop"><i class="ri-arrow-up-line"></i></button>
 
-  <script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script>
+    const lenis = new Lenis({
+        duration: 0.7, // Lower duration = Faster, snappier scroll (was 1.2)
+        easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing - feels uniform
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1.2, // Increase scroll speed multiplier (was 1)
+        smoothTouch: false, // Keep native touch scroll for better mobile performance
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+</script>
+<script type="module">
+    import autoAnimate from 'https://cdn.jsdelivr.net/npm/@formkit/auto-animate/index.min.js';
+
+    // Initialize AutoAnimate
+    const projectList = document.getElementById('projectList');
+    if (projectList) autoAnimate(projectList);
+</script>
+
+<script>
     /* ==================================================
        1. PROJECT DATA MANAGEMENT
        ================================================== */
     const projects = [
-      {
-        id: "win-tweak",
-        title: "🛠️ Win Tweak",
-        title_bn: "🛠️ উইন টুইক",
-        desc: "Essential Windows tweaks for performance and privacy.",
-        desc_bn: "পারফরম্যান্স এবং প্রাইভেসির জন্য প্রয়োজনীয় উইন্ডোজ টুইক।",
-        platform: "Windows",
-        version: "v1.0.0",
-        repo: "https://github.com/shimbil/win-tweak",
-        download: "https://github.com/shimbil/win-tweak/releases",
-        tags: ["System", "Optimizer"]
-      },
-      {
-        id: "spl-erp-paid",
-        title: "📊 SPL ERP",
-        title_bn: "📊 SPL ইআরপি",
-        desc: "Web based multipurpose ERP Software (Contact for demo).",
-        desc_bn: "ওয়েব ভিত্তিক বহুমুখী ইআরপি সফটওয়্যার (ডেমোর জন্য যোগাযোগ করুন)।",
-        platform: "Web",
-        version: "v4+",
-        demo: "https://erp.webspl.com",
-        tags: ["Business", "Enterprise", "PAID"]
-      },
-      {
-        id: "spl-erp-android",
-        title: "📊 SPL ERP MC",
-        title_bn: "📊 SPL ইআরপি এমসি (অ্যান্ড্রয়েড)",
-        desc: "Android client for SPL ERP management system.",
-        desc_bn: "SPL ইআরপি ম্যানেজমেন্ট সিস্টেমের অ্যান্ড্রয়েড ক্লায়েন্ট।",
-        platform: "Android",
-        version: "v1.0.0",
-        repo: "https://github.com/shimbil/spl-erp-mc",
-        download: "https://github.com/shimbil/spl-erp-mc/releases",
-        tags: ["Mobile", "Business"]
-      },
-      {
-        id: "spl-erp-win",
-        title: "📊 SPL ERP DC",
-        title_bn: "📊 SPL ইআরপি ডিসি (উইন্ডোজ)",
-        desc: "Windows client application for SPL ERP.",
-        desc_bn: "SPL ইআরপির জন্য উইন্ডোজ ক্লায়েন্ট অ্যাপ্লিকেশন।",
-        platform: "Windows",
-        version: "v1.0.0",
-        repo: "https://github.com/shimbil/spl-erp-dc",
-        download: "https://github.com/shimbil/spl-erp-dc/releases",
-        tags: ["Desktop", "Business"]
-      },
-      {
-        id: "magic-clean",
-        title: "✨ Magic Clean",
-        title_bn: "✨ ম্যাজিক ক্লিন",
-        desc: "Optimize PC performance by cleaning junk and temporary files.",
-        desc_bn: "অপ্রয়োজনীয় এবং টেম্পোরারি ফাইল পরিষ্কার করে পিসি অপ্টিমাইজ করুন।",
-        platform: "Windows",
-        version: "v1.0.0",
-        repo: "https://github.com/shimbil/magic-clean",
-        download: "https://github.com/shimbil/magic-clean/releases",
-        tags: ["Utility", "System"]
-      },
-      {
-        id: "pc-runtime",
-        title: "🖥️ PC Running Time",
-        title_bn: "🖥️ পিসি রানিং টাইম",
-        desc: "Track PC usage, idle time, and get break reminders.",
-        desc_bn: "পিসি ব্যবহার এবং আইডল টাইম ট্র্যাক করুন এবং ব্রেক নেওয়ার রিমাইন্ডার পান।",
-        platform: "Windows",
-        version: "v1.0.0",
-        repo: "https://github.com/shimbil/pc-running-time",
-        download: "https://github.com/shimbil/pc-running-time/releases",
-        tags: ["Productivity", "Utility"]
-      }
+        {
+            id: "win-tweak",
+            title: "🛠️ Win Tweak",
+            title_bn: "🛠️ উইন টুইক",
+            desc: "Essential Windows tweaks for performance and privacy.",
+            desc_bn: "পারফরম্যান্স এবং প্রাইভেসির জন্য প্রয়োজনীয় উইন্ডোজ টুইক।",
+            platform: "Windows",
+            version: "v1.0.0",
+            repo: "https://github.com/shimbil/win-tweak",
+            download: "https://github.com/shimbil/win-tweak/releases",
+            tags: ["System", "Optimizer"]
+        },
+        {
+            id: "spl-erp-paid",
+            title: "📊 SPL ERP",
+            title_bn: "📊 SPL ইআরপি",
+            desc: "Web based multipurpose ERP Software (Contact for demo).",
+            desc_bn: "ওয়েব ভিত্তিক বহুমুখী ইআরপি সফটওয়্যার (ডেমোর জন্য যোগাযোগ করুন)।",
+            platform: "Web",
+            version: "v4+",
+            demo: "https://erp.webspl.com",
+            tags: ["Business", "Enterprise", "PAID"]
+        },
+        {
+            id: "spl-erp-android",
+            title: "📊 SPL ERP MC",
+            title_bn: "📊 SPL ইআরপি এমসি (অ্যান্ড্রয়েড)",
+            desc: "Android client for SPL ERP management system.",
+            desc_bn: "SPL ইআরপি ম্যানেজমেন্ট সিস্টেমের অ্যান্ড্রয়েড ক্লায়েন্ট।",
+            platform: "Android",
+            version: "v1.0.0",
+            repo: "https://github.com/shimbil/spl-erp-mc",
+            download: "https://github.com/shimbil/spl-erp-mc/releases",
+            tags: ["Mobile", "Business"]
+        },
+        {
+            id: "spl-erp-win",
+            title: "📊 SPL ERP DC",
+            title_bn: "📊 SPL ইআরপি ডিসি (উইন্ডোজ)",
+            desc: "Windows client application for SPL ERP.",
+            desc_bn: "SPL ইআরপির জন্য উইন্ডোজ ক্লায়েন্ট অ্যাপ্লিকেশন।",
+            platform: "Windows",
+            version: "v1.0.0",
+            repo: "https://github.com/shimbil/spl-erp-dc",
+            download: "https://github.com/shimbil/spl-erp-dc/releases",
+            tags: ["Desktop", "Business"]
+        },
+        {
+            id: "magic-clean",
+            title: "✨ Magic Clean",
+            title_bn: "✨ ম্যাজিক ক্লিন",
+            desc: "Optimize PC performance by cleaning junk and temporary files.",
+            desc_bn: "অপ্রয়োজনীয় এবং টেম্পোরারি ফাইল পরিষ্কার করে পিসি অপ্টিমাইজ করুন।",
+            platform: "Windows",
+            version: "v1.0.0",
+            repo: "https://github.com/shimbil/magic-clean",
+            download: "https://github.com/shimbil/magic-clean/releases",
+            tags: ["Utility", "System"]
+        },
+        {
+            id: "pc-runtime",
+            title: "🖥️ PC Running Time",
+            title_bn: "🖥️ পিসি রানিং টাইম",
+            desc: "Track PC usage, idle time, and get break reminders.",
+            desc_bn: "পিসি ব্যবহার এবং আইডল টাইম ট্র্যাক করুন এবং ব্রেক নেওয়ার রিমাইন্ডার পান।",
+            platform: "Windows",
+            version: "v1.0.0",
+            repo: "https://github.com/shimbil/pc-running-time",
+            download: "https://github.com/shimbil/pc-running-time/releases",
+            tags: ["Productivity", "Utility"]
+        }
     ];
 
     /* ==================================================
        2. LOCALIZATION (i18n)
        ================================================== */
     const translations = {
-      en: {
-        title: "Shimbil's Software Projects",
-        subtitle: "List of tools built by me – crafted to make your workflow smoother and smarter.",
-        toggleTheme: "Toggle Theme",
-        searchPlaceholder: "Search projects...",
-        contactInfo: "Contact Info",
-        socialLinks: "Social Media",
-        myName: "Al Shimbil Khan",
-        myCountry: "Bangladesh",
-        disclaimer: "Disclaimer: Use these tools at your own risk. The developer is not responsible for any issues.",
-        platform: "Platform",
-        version: "Version",
-        download: "Download",
-        demo: "See Demo",
-        github: "GitHub Repo",
-        filterAll: "All"
-      },
-      bn: {
-        title: "সিমবিলের সফটওয়্যার প্রজেক্টসমূহ",
-        subtitle: "আমার তৈরি টুলস যা আপনার কাজকে করবে আরও সহজ এবং স্মার্ট।",
-        toggleTheme: "থিম পরিবর্তন",
-        searchPlaceholder: "প্রজেক্ট খুঁজুন...",
-        contactInfo: "যোগাযোগ",
-        socialLinks: "সোশ্যাল মিডিয়া",
-        myName: "আল সিমবিল খান",
-        myCountry: "বাংলাদেশ",
-        disclaimer: "সতর্কতা: নিজের ঝুঁকিতে ব্যবহার করুন। যেকোনো সমস্যার জন্য ডেভেলপার দায়ী থাকবে না।",
-        platform: "প্ল্যাটফর্ম",
-        version: "ভার্সন",
-        download: "ডাউনলোড",
-        demo: "ডেমো দেখুন",
-        github: "গিটহাব রিপো",
-        filterAll: "সবগুলো"
-      }
+        en: {
+            title: "Shimbil's Software Projects",
+            subtitle: "List of tools built by me – crafted to make your workflow smoother and smarter.",
+            toggleTheme: "Toggle Theme",
+            searchPlaceholder: "Search projects...",
+            contactInfo: "Contact Info",
+            socialLinks: "Social Media",
+            myName: "Al Shimbil Khan",
+            myCountry: "Bangladesh",
+            disclaimer: "Disclaimer: Use these tools at your own risk. The developer is not responsible for any issues.",
+            platform: "Platform",
+            version: "Version",
+            download: "Download",
+            demo: "See Demo",
+            github: "GitHub Repo",
+            filterAll: "All"
+        },
+        bn: {
+            title: "সিমবিলের সফটওয়্যার প্রজেক্টসমূহ",
+            subtitle: "আমার তৈরি টুলস যা আপনার কাজকে করবে আরও সহজ এবং স্মার্ট।",
+            toggleTheme: "থিম পরিবর্তন",
+            searchPlaceholder: "প্রজেক্ট খুঁজুন...",
+            contactInfo: "যোগাযোগ",
+            socialLinks: "সোশ্যাল মিডিয়া",
+            myName: "আল সিমবিল খান",
+            myCountry: "বাংলাদেশ",
+            disclaimer: "সতর্কতা: নিজের ঝুঁকিতে ব্যবহার করুন। যেকোনো সমস্যার জন্য ডেভেলপার দায়ী থাকবে না।",
+            platform: "প্ল্যাটফর্ম",
+            version: "ভার্সন",
+            download: "ডাউনলোড",
+            demo: "ডেমো দেখুন",
+            github: "গিটহাব রিপো",
+            filterAll: "সবগুলো"
+        }
     };
 
     /* ==================================================
@@ -673,44 +718,46 @@
     let currentLang = localStorage.getItem("lang") || "en";
 
     function updateLabels() {
-      document.querySelectorAll("[data-t]").forEach(el => {
-        const key = el.getAttribute("data-t");
-        el.textContent = translations[currentLang][key];
-      });
+        document.querySelectorAll("[data-t]").forEach(el => {
+            const key = el.getAttribute("data-t");
+            el.textContent = translations[currentLang][key];
+        });
 
-      document.querySelectorAll("[data-t-placeholder]").forEach(el => {
-        const key = el.getAttribute("data-t-placeholder");
-        el.placeholder = translations[currentLang][key];
-      });
+        document.querySelectorAll("[data-t-placeholder]").forEach(el => {
+            const key = el.getAttribute("data-t-placeholder");
+            el.placeholder = translations[currentLang][key];
+        });
 
-      const langBtnLabel = document.getElementById("langLabel");
-      langBtnLabel.textContent = currentLang === "en" ? "Bangla" : "English";
+        const langBtnLabel = document.getElementById("langLabel");
+        langBtnLabel.textContent = currentLang === "en" ? "Bangla" : "English";
 
-      // Update HTML lang attribute
-      document.documentElement.lang = currentLang;
+        // Update HTML lang attribute
+        document.documentElement.lang = currentLang;
 
-      renderProjects();
+        renderProjects();
     }
 
     function toggleLang() {
-      currentLang = currentLang === "en" ? "bn" : "en";
-      localStorage.setItem("lang", currentLang);
-      updateLabels();
+        currentLang = currentLang === "en" ? "bn" : "en";
+        localStorage.setItem("lang", currentLang);
+        updateLabels();
     }
-	
+
     function renderProjects() {
-      const container = document.getElementById("projectList");
-      container.innerHTML = "";
-      const t = translations[currentLang];
+        const container = document.getElementById("projectList");
+        container.innerHTML = "";
+        const t = translations[currentLang];
 
-      projects.forEach((p, index) => {
-        const card = document.createElement("div");
-        card.className = "project-card";
-        card.style.transitionDelay = `${index * 0.1}s`;
+        projects.forEach((p, index) => {
+            const card = document.createElement("div");
+            card.className = "project-card";
+            // removed transitionDelay to avoid conflicts with auto-animate during filtering
+            // but kept it for initial load if needed, handled via class
+            card.style.transitionDelay = `${index * 0.05}s`;
 
-        const badges = p.tags.map(tag => `<span class="badge">${tag}</span>`).join("");
+            const badges = p.tags.map(tag => `<span class="badge">${tag}</span>`).join("");
 
-        card.innerHTML = `
+            card.innerHTML = `
           <div>
             <div class="project-meta">
               <span class="badge" style="background: rgba(var(--primary-rgb), 0.1)">${p.version}</span>
@@ -728,76 +775,78 @@
             ${p.repo ? `<a href="${p.repo}" target="_blank" class="btn-action btn-ghost"><i class="ri-github-line"></i> ${t.github}</a>` : ''}
           </div>
         `;
-        container.appendChild(card);
+            container.appendChild(card);
 
-        // Trigger reflow for animation
-        setTimeout(() => card.classList.add("visible"), 50);
-      });
+            // Trigger reflow for animation
+            setTimeout(() => card.classList.add("visible"), 50);
+        });
     }
 
     function filterContent() {
-      const query = document.getElementById("searchBox").value.toLowerCase();
-      const cards = document.querySelectorAll(".project-card");
-      const activeFilterBtn = document.querySelector(".filter-chip.active");
-      const activeFilter = activeFilterBtn.getAttribute('onclick').match(/'([^']+)'/)[1];
+        const query = document.getElementById("searchBox").value.toLowerCase();
+        const cards = document.querySelectorAll(".project-card");
+        const activeFilterBtn = document.querySelector(".filter-chip.active");
+        const activeFilter = activeFilterBtn.getAttribute('onclick').match(/'([^']+)'/)[1];
 
-      cards.forEach(card => {
-        const platformLabel = card.querySelector('.platform-label').textContent;
-        const text = card.textContent.toLowerCase();
+        cards.forEach(card => {
+            const platformLabel = card.querySelector('.platform-label').textContent;
+            const text = card.textContent.toLowerCase();
 
-        const matchesSearch = text.includes(query);
-        const matchesPlatform = (activeFilter === "All") || (platformLabel === activeFilter);
+            const matchesSearch = text.includes(query);
+            const matchesPlatform = (activeFilter === "All") || (platformLabel === activeFilter);
 
-        if (matchesSearch && matchesPlatform) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
-      });
+            if (matchesSearch && matchesPlatform) {
+                card.style.display = "flex";
+                // Re-add visible class if it was hidden
+                setTimeout(() => card.classList.add("visible"), 10);
+            } else {
+                card.style.display = "none";
+                card.classList.remove("visible");
+            }
+        });
     }
 
     function setFilter(platform, btn) {
-      document.querySelectorAll(".filter-chip").forEach(chip => chip.classList.remove("active"));
-      btn.classList.add("active");
-      filterContent();
+        document.querySelectorAll(".filter-chip").forEach(chip => chip.classList.remove("active"));
+        btn.classList.add("active");
+        filterContent();
     }
 
     function toggleTheme() {
-      const body = document.body;
-      const theme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      body.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
+        const body = document.body;
+        const theme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        body.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
 
-      const icon = document.querySelector("#themeBtn i");
-      icon.className = theme === "dark" ? "ri-sun-line" : "ri-moon-line";
+        const icon = document.querySelector("#themeBtn i");
+        icon.className = theme === "dark" ? "ri-sun-line" : "ri-moon-line";
     }
 
     // Scroll to Top
     const scrollBtn = document.getElementById("scrollToTop");
-    window.onscroll = () => {
-      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        scrollBtn.classList.add("show");
-      } else {
-        scrollBtn.classList.remove("show");
-      }
-    };
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollBtn.classList.add("show");
+        } else {
+            scrollBtn.classList.remove("show");
+        }
+    });
     scrollBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+        lenis.scrollTo(0);
     };
 
     // Initialize
     window.addEventListener("DOMContentLoaded", () => {
-      // Load Theme
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.body.setAttribute("data-theme", savedTheme);
-        const icon = document.querySelector("#themeBtn i");
-        if (savedTheme === "dark") icon.className = "ri-sun-line";
-      }
+        // Load Theme
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.body.setAttribute("data-theme", savedTheme);
+            const icon = document.querySelector("#themeBtn i");
+            if (savedTheme === "dark") icon.className = "ri-sun-line";
+        }
 
-      updateLabels();
+        updateLabels();
     });
-  </script>
+</script>
 </body>
-
 </html>
