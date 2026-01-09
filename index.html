@@ -31,18 +31,25 @@
 
         body {
             font-family: 'Hind Siliguri', sans-serif;
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
             background-image:
-                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.05) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(124, 58, 237, 0.05) 0px, transparent 50%);
+                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.12), transparent 25%),
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
             min-height: 100vh;
+            color: #1e293b;
         }
 
         .header-glass {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            background: var(--glass-bg);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: #ffffff !important;
+            border: 1px solid rgba(226, 232, 240, 0.8) !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
         }
 
         .project-card {
@@ -449,7 +456,7 @@
                 showScroll: false,
                 translations: {
                     en: {
-                        title: "Shimbil's Software Projects",
+                        title: "Al Shimbil Khan",
                         subtitle: "List of tools built by me – crafted for a smarter workflow.",
                         searchPlaceholder: "Search projects...",
                         contactInfo: "Contact Info",
@@ -464,7 +471,7 @@
                         filterAll: "All"
                     },
                     bn: {
-                        title: "সিমবিলের সফটওয়্যার প্রজেক্টসমূহ",
+                        title: "আল সিমবিল খান",
                         subtitle: "আমার তৈরি টুলস যা আপনার কাজকে করবে আরও সহজ এবং স্মার্ট।",
                         searchPlaceholder: "প্রজেক্ট খুঁজুন...",
                         contactInfo: "যোগাযোগ",
